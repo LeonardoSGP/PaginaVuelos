@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Dashboard</title>
+    <link rel="stylesheet" href="css/estilos8.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+  <!-- Barra Lateral -->
+  <aside class="sidebar">
+      <div class="profile">
+          <img src="https://i.pravatar.cc/120?img=68" alt="">
+          <h3>ALEX JOHNSON</h3>
+          <small>alex.johnson@gmail.com</small>
+      </div>
+<ul class="menu">
+    <li><i class="fas fa-home"></i> Dashboard</li>
+    <li><i class="fas fa-plane"></i> Flights</li>
+    <li><i class="fas fa-wallet"></i> Wallet</li>
+    <li><i class="fas fa-file-alt"></i> Reports</li>
+    <li><i class="fas fa-chart-pie"></i> Statistics</li>
+    <li><i class="fas fa-cog"></i> Settings</li>
+</ul>
+      <div class="active-users">
+          <p>ACTIVE USERS</p>
+          <div class="users">
+              <img src="https://i.pravatar.cc/40?img=9">
+              <img src="https://i.pravatar.cc/40?img=4">
+              <img src="https://i.pravatar.cc/40?img=2">
+              <div class="extra">+70</div>
+          </div>
+          <img class="sidebar-map" src="imagenes/mapa.png" alt="map">
+      </div>
+  </aside>
+  <!-- MAIN  -->
+  <main class="dashboard">
+      <!-- Tarjetas -->
+      <section class="top-cards">
+        <div class="card plane plane-gold">
+          <h4>Boeing 787</h4>
+          <h2>$548</h2>
+          <img class="plane-img" src="imagenes/avion.png">
+        </div>
+        <div class="card plane plane-dark">
+          <h4>Airbus 811</h4>
+          <h2>$620</h2>
+          <img class="plane-img" src="imagenes/avion.png">
+        </div>
+        <div class="card total">
+          <h4>Total Flights</h4>
+          <h2>850</h2>
+          <img class="map-icon" src="imagenes/mapa.png">
+        </div>
+      </section>
+      <!-- MID -->
+<section class="middle">
+
+  <!-- Last Trips -->
+  <div class="card table-card">
+    <h3 class="card-title">Last Trips</h3>
+    <p class="card-subtitle">Overview of latest month</p>
+    <table class="trips">
+      <thead>
+        <tr>
+          <th>Members</th>
+          <th>Flight</th>
+          <th>Total Members</th>
+          <th>Ticket Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <div class="member">
+              <img class="avatar" src="https://i.pravatar.cc/64?img=12" alt="John Doe">
+              <div class="m-info">
+                <div class="name">John Doe</div>
+                <div class="email">john@gmail.com</div>
+              </div>
+            </div>
+          </td>
+          <td>Qatar</td>
+          <td><span class="badge-gold">5</span></td>
+          <td>$56k</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="member">
+              <img class="avatar" src="https://i.pravatar.cc/64?img=22" alt="Martin Loiness">
+              <div class="m-info">
+                <div class="name">Martin Loiness</div>
+                <div class="email">martin_loi@gmail.com</div>
+              </div>
+            </div>
+          </td>
+          <td>Emirates</td>
+          <td><span class="badge-gold">2</span></td>
+          <td>$56k</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Barras -->
+  <div class="card statistics">
+    <h3 class="card-title">Statistics</h3>
+    <canvas id="barChart"></canvas>
+  </div>
+</section>
+<section class="bottom">
+
+<div class="card pie-card">
+    <h3>Flight Share</h3>
+    <div class="pie-wrapper">
+        <canvas id="pieChart"></canvas>
+        <span class="pie-label">Flight Share</span>
+    </div>
+</div>
+
+  <div class="card">
+    <h3>Flight Schedule</h3>
+    <canvas id="lineChart"></canvas>
+    
+  </div>
+</section>
+  </main>
+</div>
+<script src="dashboard.js"></script>
+</body>
+</html>
